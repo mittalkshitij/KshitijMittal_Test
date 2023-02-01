@@ -10,7 +10,7 @@ import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
 
-
+    lateinit var tabTabLayout : TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,13 +18,14 @@ class MainActivity : AppCompatActivity() {
 
 
         val tabViewpager = findViewById<ViewPager>(R.id.tab_viewpager)
-        val tabTabLayout = findViewById<TabLayout>(R.id.tab_tablayout)
-
+        tabTabLayout = findViewById<TabLayout>(R.id.tab_tablayout)
 
         mysetupViewPager(tabViewpager)
 
         tabTabLayout.setupWithViewPager(tabViewpager)
+
     }
+
 
     fun mysetupViewPager(viewpager: ViewPager) {
 

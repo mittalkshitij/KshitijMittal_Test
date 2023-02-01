@@ -16,14 +16,6 @@ class HomeFragment : Fragment() {
 
     lateinit var homeTabs : TabLayout
 
-     val tabIcons = intArrayOf(
-        R.drawable.ic_baseline_star_outline_24,
-        R.drawable.ic_baseline_bar_chart_24,
-        R.drawable.ic_baseline_category_24,
-        R.drawable.ic_baseline_star_24,
-        R.drawable.ic_baseline_lock_open_24
-    )
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,24 +23,16 @@ class HomeFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
         homeTabs = view.findViewById<TabLayout>(R.id.homeTabs)
-
-
         val mViewPager = view.findViewById<View>(R.id.home_viewPager) as ViewPager
-
         val mSectionsPagerAdapter = SectionsPagerAdapter(childFragmentManager)
-
         mViewPager.adapter = mSectionsPagerAdapter
-
-
         return view
 
     }
 
-
-
-
     private class SectionsPagerAdapter(fm: FragmentManager?) :
         FragmentPagerAdapter(fm!!) {
+
         override fun getItem(position: Int): Fragment {
             return when (position) {
                 0 -> ForYouFragment.newInstance(1)

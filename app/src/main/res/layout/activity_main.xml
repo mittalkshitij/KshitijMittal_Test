@@ -19,12 +19,14 @@
             android:drawableStart="@drawable/ic_baseline_menu_24"
             android:drawableEnd="@drawable/ic_baseline_mic_24"
             android:hint="Google Play"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="10dp"
             android:paddingStart="10dp"
             android:layout_marginEnd="10dp"
             android:paddingEnd="10dp"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
             android:background="@color/white"/>
 
         <com.google.android.material.tabs.TabLayout
