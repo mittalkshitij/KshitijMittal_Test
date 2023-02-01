@@ -17,7 +17,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs2"
+        android:id="@+id/homeTabs"
         android:background="@color/white"
         app:tabTextColor="#22A867"
         app:tabIndicatorColor="#22A867"
