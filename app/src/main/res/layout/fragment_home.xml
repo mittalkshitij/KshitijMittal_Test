@@ -20,6 +20,7 @@
         android:id="@+id/homeTabs"
         android:background="@color/white"
         app:tabTextColor="#22A867"
+        app:tabMode="scrollable"
         app:tabIndicatorColor="#22A867"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
