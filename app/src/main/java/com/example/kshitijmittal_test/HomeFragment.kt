@@ -9,9 +9,20 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 
 
 class HomeFragment : Fragment() {
+
+    lateinit var homeTabs : TabLayout
+
+     val tabIcons = intArrayOf(
+        R.drawable.ic_baseline_star_outline_24,
+        R.drawable.ic_baseline_bar_chart_24,
+        R.drawable.ic_baseline_category_24,
+        R.drawable.ic_baseline_star_24,
+        R.drawable.ic_baseline_lock_open_24
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,11 +30,21 @@ class HomeFragment : Fragment() {
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
 
+        homeTabs = view.findViewById<TabLayout>(R.id.homeTabs)
+
+
         val mViewPager = view.findViewById<View>(R.id.home_viewPager) as ViewPager
+
         val mSectionsPagerAdapter = SectionsPagerAdapter(childFragmentManager)
+
         mViewPager.adapter = mSectionsPagerAdapter
+
+
         return view
+
     }
+
+
 
 
     private class SectionsPagerAdapter(fm: FragmentManager?) :
@@ -51,7 +72,10 @@ class HomeFragment : Fragment() {
                 3 -> "Editor's Choice"
                 else -> "Early Access"
             }
+
+
         }
+
     }
 
 
